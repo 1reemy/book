@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="book.js" defer></script>
+        <link rel="stylesheet" href="style.css"/>
+        <title>Library</title>
+    </head>    
+    <body>
+        <header id="title">
+            <h1>Welcome To The Library!</h1>
+        </header>        
+        <main>
+            <div id = "welcome">
+                <div id="modal">
+                    <span class="close">&times;</span>
+                    <div id = "sheet">
+                    <form name = "book1">
+                        <label>Title:<input type = "text" name ="title" value = "" placeholder="Enter Title of Book"></label><br><br>
+                        <label>Author:<input type = "text" name = "author" value = "" placeholder="Enter Author of Book"></label><br><br>
+                        <label>Pages:<input type = "text" name = "pages" value = "" placeholder="Enter Number of Pages"></label><br><br> 
+                        <button id="add" type = "Button">Add Book</button>
+                    </form>
+                    </div>
+                </div>
+                </div>           
+            <div id="collect">
+            <button id = "plus" type = "button">Add A Book to The Shelf</button>
+            </div>
+            <div id="shelf"></div>            
+        </main>
+        <footer>
+
+        </footer>
+    </body>
+</html>
