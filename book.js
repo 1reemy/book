@@ -61,7 +61,7 @@ function addToLibrary(){
         button.textContent = 'Delete';
         readButton.textContent = 'Not Read';
 
-        list.style.cssText = "display: flex; align-items:center; flex-direction:column; border-style: solid; border-color: grey; background-color: rgb(50,200,100); color: blue; width:100px";
+        list.style.cssText = "display: flex; align-items:center; flex-direction:column; border-style: solid; border-color: grey; background-color: rgb(50,200,100); color: blue; width:100px; margin-bottom: 20px";
         divTitle.style.cssText = "display:flex; justify-content:center; align-items:center";
         divAuthor.style.cssText = "display:flex; justify-content:center; align-items:center";
         divPages.style.cssText = "display:flex; justify-content:center; align-items:center";

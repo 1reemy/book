@@ -8,6 +8,9 @@
     align-items: center;
     justify-content: center;
 }
+#plus{
+    margin-bottom: 20px;
+}
 #form{
     display:flex;
     flex-direction: column;
