@@ -1,13 +1,16 @@
 function Book(){
 
 }
+
+Book.prototype.read = false;
+
 function Books(title, author, pages){
     this.title = title;
     this.author = author;
     this.pages = pages;
-    this.haveRead = 'No';
+    //this.read = true;
     this.info = () =>{
-        return (this.title + " by " + this.author + ", " + this.pages + " pages. " + "Read yet? " + this.haveRead);
+        return (this.title + " by " + this.author + ", " + this.pages + " pages. " + "Read yet? " + this.read);
     }    
 }
 
@@ -50,22 +53,25 @@ function addToLibrary(){
         const divPages = document.createElement('p');
         const button = document.createElement('button');
         const list = document.createElement('div');
+        const readButton = document.createElement('button');
 
         divTitle.textContent = readingList.title;
         divAuthor.textContent = readingList.author;
         divPages.textContent = readingList.pages;
-        button.textContent = 'X';
+        button.textContent = 'Delete';
+        readButton.textContent = 'Not Read';
 
-        list.style.cssText = "border-style: solid; border-color: grey; background-color: rgb(50,200,100); color: blue; width:100px";
+        list.style.cssText = "display: flex; align-items:center; flex-direction:column; border-style: solid; border-color: grey; background-color: rgb(50,200,100); color: blue; width:100px";
         divTitle.style.cssText = "display:flex; justify-content:center; align-items:center";
         divAuthor.style.cssText = "display:flex; justify-content:center; align-items:center";
         divPages.style.cssText = "display:flex; justify-content:center; align-items:center";
-        button.style.cssText = "display:flex; border-radius:100px";
-
+        button.style.cssText = "width:80px; color: blue; background-color: red";
+        readButton.style.cssText = "width:80px; color: blue; background-color: red";
 
         list.appendChild(divTitle);
         list.appendChild(divAuthor);
         list.appendChild(divPages);
+        list.appendChild(readButton);
         list.appendChild(button);
         
         library.push(list);
@@ -73,7 +79,17 @@ function addToLibrary(){
 
         button.addEventListener('click',() =>{            
             display.removeChild(list);
-        })    
+        }) 
+        readButton.addEventListener('click',()=>{                                    
+            if(readingList.read = !readingList.read){
+                readButton.textContent = 'Read';
+                readButton.style.cssText = "width:80px; color: blue; background-color: yellow";
+            }
+            else{
+                readButton.textContent = 'Not Read';
+                readButton.style.cssText = "width:80px; color: blue; background-color: red";
+            }
+        })   
         book1.reset();                        
     });
 }
