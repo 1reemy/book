@@ -15,13 +15,13 @@ function Books(title, author, pages){
 }*/
 
 /*Books.prototype = Object.create(Book.prototype)*/
-class Book{
+class Books{
     constructor(title, author, pages){
         this.title = title;
         this.author = author;
         this.pages = pages;
     }
-    modal(){
+    /*modal(){
         addition.addEventListener("click",()=>{
             popUp.style.display = "block";
         })
@@ -92,7 +92,7 @@ class Book{
         for(let i = 0; i <= library.length; i++){       
             shelf.appendChild(display);
         }    
-    }
+    }*/
 }
 
 let library = [];
@@ -104,9 +104,11 @@ let popUp = document.querySelector('#modal');
 let shelf = document.querySelector('#shelf');
 let close = document.querySelector('.close');
 
-let additionBook = new Book(title,author,pages);
+Books.prototype.read = false;
 
-/*function modal(){
+//let Book = new Books(title,author,pages);
+
+function modal(){
     addition.addEventListener("click",()=>{
         popUp.style.display = "block";
     })
@@ -179,10 +181,10 @@ function selection(){
     for(let i = 0; i <= library.length; i++){       
         shelf.appendChild(display);
     }    
-}*/
-//modal();
-//addToLibrary();
-//selection();
-additionBook.modal();
+}
+modal();
+addToLibrary();
+selection();
+/*additionBook.modal();
 additionBook.addToLibrary();
-additionBook.selection();
+additionBook.selection();*/
