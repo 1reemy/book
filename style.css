@@ -55,3 +55,6 @@ main{
     align-items: center;
     padding-top: 100px;
 }
+body{
+    background-color:aquamarine;
+}
